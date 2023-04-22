@@ -11,19 +11,19 @@ export default function CreateTour() {
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
-              <Link href="/adm/createTour/">
-                <a className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">
-                  Product Add
-                  </a>
+              <Link href="/adm/createProduct/" className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">
+                 
+                 Product Add
+            
               </Link>
             </div>
             <div className="ml-3 inline-flex rounded-md shadow">
-              <a
+              <Link
                 href="#"
                 className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -112,7 +112,11 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+<<<<<<< HEAD
     "src/pages/adm/createTour.tsx",
+=======
+    "src/pages/adm/createProduct.tsx",
+>>>>>>> master
     "src/components/ProductList.tsx",
     "src/components/CircleGeometry.js"
   ],

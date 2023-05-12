@@ -5,7 +5,7 @@ import { prisma } from "./../../../lib/prisma";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function (req: NextApiRequest, res: NextApiResponse) {
-  const  id  = req.query.id;
+  const  id  = req.body.id;
 
   const user = await prisma.user.findFirst({
     where: {
@@ -16,19 +16,21 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       name: true,
       email: true,
       avatar: true,
-      tours: {
+      product: {
         select: {
           id: true,
           title: true,
+          price: true,
+          stock: true,
           photo: true,
           tambnail: true,
           imgs: {
             select: {
               url: true,
             }
-          }
-        },
-      },
+        }
+      }
+    },
     },
  
   });

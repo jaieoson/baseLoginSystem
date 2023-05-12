@@ -114,7 +114,7 @@
     "**/*.tsx",
     "src/pages/adm/createProduct.tsx",
     "src/components/ProductList.tsx",
-    "src/components/CircleGeometry.js"
+   
   ],
   "exclude": [
     "node_modules"

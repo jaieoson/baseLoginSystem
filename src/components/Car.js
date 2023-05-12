@@ -6,8 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-
-
 const Cart = () => {
 
   const cart = useCart();
@@ -21,7 +19,7 @@ return (
       
 
       <Image src={Bgcart} width={70} style={{ position: "absolute", zIndex: "0" }} alt="Carrinho de compras" />
-        <div style={{zIndex: "1", marginLeft: "30px", marginTop: "-17px"}} className="mr-4 font-bold ">          
+        <div style={{zIndex: "1", marginLeft: "30px", marginTop: "-17px"}} className="mr-4 font-bold  ">          
         {itemsCount > 0 && itemsCount }
       
       </div>

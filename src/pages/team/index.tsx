@@ -108,7 +108,6 @@ export default function Component(props: any) {
   
   
   const profile = "./profile/";
-  const team = "./team/";
 
   return (
     <div>
@@ -124,18 +123,13 @@ export default function Component(props: any) {
       
       <div style={{ width: "80vW", left: "20px" }} className="border rounded-lg p-4 flex ">
 
-        <div className="w-1/3 p-2 flex flex-col border border-gray-500">
-        <Link href="/team/" className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">
-    Team
-    </Link>
-          <br></br>
-          
-      <Link href="/adm/editProfile/" className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">
-    Editar Loja
+      <div className="w-1/3 p-2 flex flex-col border border-gray-500">
+      <Link href="/adm/" className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">
+    ADM
     </Link>
      <br></br>
-    <Link href="/adm/createProduct/" className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">   
-    Product Add
+    <Link href="/team/createProduct/" className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">   
+    CRIAR POST
     </Link>
 
         </div>
@@ -146,32 +140,8 @@ export default function Component(props: any) {
       <br></br>
       {mensag}
       <br></br>
-          
-      {prod.map(product => (
-        <div className="w-1/3 p-4" key={product.id}>
-          <div className="w-64 h-32   bg-gray-200 overflow-hidden rounded-lg">
-
-          <Link href={product.supplierUrl} legacyBehavior>
-            
-              <Image src={product.photo} alt={product.title}
-                        width={300}
-                        height={200}
-                        priority
-                        className="block object-cover object-center w-full h-full rounded-lg"/>
-                      
-              
-              </Link>
-
-
-          </div>
-          <div className="mt-4 text-center">
-            <h2 className="text-xl font-semibold text-gray-700">{product.title}</h2>
-            <p className="mt-1 text-lg font-semibold text-gray-800">{product.price}</p>
-          </div>
-        
-          
-        </div>
-      ))}
+     <h1>MURAL</h1>     
+     
     </div>
 
 </div>

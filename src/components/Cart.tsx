@@ -6,6 +6,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { useCart } from '../context/CartContext';
 import { FormEvent } from 'react';
 import { useEffect } from 'react';
+import { type } from 'os';
 
 // aqui faz um for no cart e a cada produto chama a api cart
  
@@ -53,10 +54,12 @@ const PageCart = (props: any) => {
   const [prodQtd, setProdQtd] = React.useState(0);
   const [prodId, setProdId] = React.useState([]);
 
-  const cart = useCart();  
+  const cart1 = useCart();  
   const userId = props.user.id;
 
   const listItems = [];
+
+
 
   const items =  Object.keys(cart.cart).map(key => {
   const { product } = cart.cart[key];

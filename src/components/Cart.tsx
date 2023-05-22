@@ -58,7 +58,8 @@ const PageCart = (props: any) => {
   const userId = props.user.id;
 
   const listItems = [];
-
+ 
+  const li = "okkkkkk";
 
 
   const items =  Object.keys(cart.cart).map(key => {

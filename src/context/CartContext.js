@@ -100,5 +100,5 @@ export const CartProvider = ({ children }) => {
 
 export const useCart = () => {
   const cart = useContext(CartContext);
-  return cart;
+  return cart, addToCart, removeFromCart, changeQtd;
 }

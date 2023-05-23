@@ -53,12 +53,12 @@ const PageCart = (props: any) => {
   const [prodQtd, setProdQtd] = React.useState(0);
   const [prodId, setProdId] = React.useState([]);
 
-  const cart = useCart();  
+  const cart1 = useCart();  
   const userId = props.user.id;
 
   const listItems = [];
  
-  //const cartt: any = {};
+  const cart: any = {};
 
   const carrinho = Object.keys(cart.cart);
 
@@ -72,13 +72,13 @@ const PageCart = (props: any) => {
 
   const handleRemove = id => () => {
     // código para remover item do carrinho e atualizar o total aqui
-    cart.removeFromCart(id)      
+    cart1.removeFromCart(id)      
   };
 
 
   // tem que consertar a atualização da quantity do cart
   const changeQtd = (id) => (evt) => {
-    cart.changeQtd(id, evt.target.value)
+    cart1.changeQtd(id, evt.target.value)
     setProdQtd(evt.target.value);
   }
 

@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useCart } from '../context/CartContext';
 import { FormEvent } from 'react';
-import { useEffect } from 'react';
-import { type } from 'os';
+
 
 // aqui faz um for no cart e a cada produto chama a api cart
  
@@ -54,15 +53,17 @@ const PageCart = (props: any) => {
   const [prodQtd, setProdQtd] = React.useState(0);
   const [prodId, setProdId] = React.useState([]);
 
-  const cart1 = useCart();  
+  const cart = useCart();  
   const userId = props.user.id;
 
   const listItems = [];
  
-  const cart: any = {};
+  //const cartt: any = {};
 
-  const items =  Object.keys(cart.cart).map(key => {
-  const { product } = cart.cart[key];
+  const carrinho = Object.keys(cart.cart);
+
+  const items =  carrinho.map(key => {
+  const { product } = carrinho[key];
    
    listItems.push(product.id);
 
@@ -71,13 +72,13 @@ const PageCart = (props: any) => {
 
   const handleRemove = id => () => {
     // código para remover item do carrinho e atualizar o total aqui
-    cart1.removeFromCart(id)      
+    cart.removeFromCart(id)      
   };
 
 
   // tem que consertar a atualização da quantity do cart
   const changeQtd = (id) => (evt) => {
-    cart1.changeQtd(id, evt.target.value)
+    cart.changeQtd(id, evt.target.value)
     setProdQtd(evt.target.value);
   }
 
